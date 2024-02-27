@@ -1,0 +1,60 @@
+{
+  "name": "parse_observing_campaign",
+  "description": "Parses Observing Campaign",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "description": "Title"
+      },
+      "principal_investigator": {
+        "type": "string",
+        "description": "Principal investigator"
+      },
+      "abstract": {
+        "type": "string",
+        "description": "Abstract"
+      },
+      "justification": {
+        "type": "string",
+        "description": "Justification for object observation"
+      },
+      "status": {
+        "type": "string",
+        "description": "Should be 'Active' or 'Concluded'"
+      },
+      "targets": {
+        "type": "array",
+        "description": "Observing targets",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Canonical VSX name"
+            }
+          }
+        }
+      },
+      "start_date": {
+        "type": "string",
+        "description": "Start date"
+      },
+      "end_date": {
+        "type": "string",
+        "description": "End date"
+      }
+    },
+    "required": [
+      "title",
+      "principal_investigator",
+      "start_date",
+      "end_date",
+      "abstract",
+      "justification",
+      "status",
+      "targets"
+    ]
+  }
+}

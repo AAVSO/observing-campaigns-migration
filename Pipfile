@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+openai = "*"
+requests = "*"
+beautifulsoup4 = "*"
+fire = "*"
+html2text = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
+
+[scripts]
+migrate = "python src/get_observing_campaigns.py"

@@ -1,5 +1,5 @@
-import json
 import csv
+import json
 
 # Read the JSON data from a file
 with open('data.json', 'r') as json_file:
