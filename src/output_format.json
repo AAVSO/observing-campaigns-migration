@@ -34,16 +34,64 @@
               "type": "string",
               "description": "Canonical VSX name"
             }
-          }
+          },
+          "required": [
+            "name"
+          ]
         }
+      },
+      "photometry_filters": {
+        "type": "array",
+        "description": "Photometry filters",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Single letter codes only, e.g. 'V', 'B', 'r', etc."
+            }
+          },
+          "required": [
+            "name"
+          ]
+        }
+      },
+      "spectroscopy_lines": {
+        "type": "array",
+        "description": "Spectroscopy lines (e.g. 'H-alpha', 'He I 5876', 'Ca II 8542', etc.)",
+        "items": {
+          "type": "object",
+          "properties": {
+            "element": {
+              "type": "string",
+              "description": "Element of line"
+            },
+            "wavelength": {
+              "type": "number",
+              "description": "Wavelength of line (in Angstroms)"
+            }
+          },
+          "required": [
+            "element",
+            "wavelength"
+          ]
+        }
+      },
+      "photometry_requested": {
+        "type": "boolean",
+        "description": "Photometry requested"
+      },
+      "spectroscopy_requested": {
+        "type": "boolean",
+        "description": "Spectroscopy requested"
       },
       "start_date": {
         "type": "string",
-        "description": "Start date"
+        "description": "Start date (in 'YYYY-MM-DD' format)"
       },
       "end_date": {
         "type": "string",
-        "description": "End date"
+        "description": "End date (in 'YYYY-MM-DD' format)"
       }
     },
     "required": [
@@ -53,6 +101,8 @@
       "end_date",
       "abstract",
       "justification",
+      "spectroscopy_lines",
+      "photometry_filters",
       "status",
       "targets"
     ]

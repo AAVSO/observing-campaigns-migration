@@ -1,8 +1,6 @@
 .DS_Store
 .idea
-out.json
-
-
+_out.json
 
 ### Python template
 # Byte-compiled / optimized / DLL files
@@ -158,6 +156,12 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+*.json
+data/
+
+!data/observing_campaigns.json
+
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can

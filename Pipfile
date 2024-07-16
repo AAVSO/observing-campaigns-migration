@@ -9,6 +9,8 @@ requests = "*"
 beautifulsoup4 = "*"
 fire = "*"
 html2text = "*"
+aiohttp = "*"
+tenacity = "*"
 
 [dev-packages]
 
